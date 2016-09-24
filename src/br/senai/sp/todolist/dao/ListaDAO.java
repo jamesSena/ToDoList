@@ -23,6 +23,7 @@ public class ListaDAO {
 	}
 
 	public List<Lista> listar(){
-		TypedQuery<Lista> query= manager.createQuery("");
+		TypedQuery<Lista> query= manager.createQuery("select l from Lista", Lista.class);
+		return query.getResultList();
 	}
 }
