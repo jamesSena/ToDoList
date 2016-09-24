@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -19,7 +20,7 @@ public class Lista {
 	private Long id;
 	@Column(length=100)
 	private String titulo;
-	@OneToMany(mappedBy="lista",cascade=CascadeType.ALL, orphanRemoval=true)
+	@OneToMany(mappedBy="lista",cascade=CascadeType.ALL, orphanRemoval=true, fetch=FetchType.EAGER)
 	private List<ItemLista> itens;
 	
 	
