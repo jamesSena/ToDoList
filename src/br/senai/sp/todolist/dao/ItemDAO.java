@@ -9,6 +9,10 @@ import org.springframework.transaction.annotation.Transactional;
 import br.senai.sp.todolist.modelo.ItemLista;
 import br.senai.sp.todolist.modelo.Lista;
 
+/**
+ * @author jamesson
+ *
+ */
 @Repository
 public class ItemDAO {
 
